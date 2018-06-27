@@ -1,8 +1,9 @@
+
 <!DOCTYPE html>
 <html>
 	<head>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.css">
-		<title>My Contacts</title>
+                <title>My Contacts</title>
 	</head>
 	<body>
 		<div class="container">
@@ -57,34 +58,10 @@
 				
 			</ul>
 		</div>
-
-		<script>
-			// Get input element
-			let filterInput = document.getElementById('filterInput');
-                       // Add event listener
-                        filterInput.addEventListener('keyup', filterNames);
-
-                        function filterNames(){
-		        // Get volue of input
-				let filterValue = document.getElementById('filterInput').value.toUpperCase();
-			// Get names ul
-				let ul = document.getElementById('names');
-
-				// Get list from ul
-				let li = ul.querySelectorAll('li.collection-item');
-				// loop through collection-item lis
-				for(let i = 0;i < li.length;i++){
-					let a = li[i].getElementsByTagName('a')[0];
-					// if matched
-					if(a.innerHTML.toUpperCase().indexOf(filterValue) > -1){
-						li[i].style.display = '';
-					}else{
-						li[i].style.display = 'none';
-					}
-				}
-                               
+	        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="./script.js" type="text/javascript"></script>         
                        
-			}
-		</script>
-	</body>
-</html>
+		
+	</body>	
+</html>	
+
